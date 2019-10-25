@@ -44,9 +44,9 @@ public class Library extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JLabel lblLibraryManagement = new JLabel("Library Management - JavaTpoint");
+		JLabel lblLibraryManagement = new JLabel("GoodReads - Personal Library. P4&5");
 		lblLibraryManagement.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblLibraryManagement.setForeground(Color.GRAY);
+		lblLibraryManagement.setForeground(Color.GREEN);
 		
 		JButton btnAdminLogin = new JButton("Admin Login");
 		btnAdminLogin.addActionListener(new ActionListener() {
@@ -57,7 +57,7 @@ public class Library extends JFrame {
 		});
 		btnAdminLogin.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		
-		JButton btnLibrarianLogin = new JButton("Librarian Login");
+		JButton btnLibrarianLogin = new JButton("User Login");
 		btnLibrarianLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				LibrarianLogin.main(new String[]{});

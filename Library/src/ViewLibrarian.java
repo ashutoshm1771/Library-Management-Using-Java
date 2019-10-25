@@ -43,7 +43,7 @@ public class ViewLibrarian extends JFrame {
 		String column[]=null;
 		try{
 			Connection con=DB.getConnection();
-			PreparedStatement ps=con.prepareStatement("select * from librarian",ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+			PreparedStatement ps=con.prepareStatement("select * from Librarian",ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
 			ResultSet rs=ps.executeQuery();
 			
 			ResultSetMetaData rsmd=rs.getMetaData();

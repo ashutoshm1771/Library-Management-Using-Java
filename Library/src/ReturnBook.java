@@ -49,13 +49,13 @@ public class ReturnBook extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JLabel lblReturnBook = new JLabel("Return Book");
+		JLabel lblReturnBook = new JLabel("Return Item");
 		lblReturnBook.setForeground(Color.GRAY);
 		lblReturnBook.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		
-		JLabel lblBookCallno = new JLabel("Book Callno:");
+		JLabel lblBookCallno = new JLabel("Item CodeNo:");
 		
-		JLabel lblStudentId = new JLabel("Student Id:");
+		JLabel lblStudentId = new JLabel("User Id:");
 		
 		textField = new JTextField();
 		textField.setColumns(10);
@@ -63,14 +63,14 @@ public class ReturnBook extends JFrame {
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
 		
-		JButton btnReturnBook = new JButton("Return Book");
+		JButton btnReturnBook = new JButton("Return Item");
 		btnReturnBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String bookcallno=textField.getText();
 				int studentid=Integer.parseInt(textField_1.getText());
 				int i=ReturnBookDao.delete(bookcallno, studentid);
 				if(i>0){
-					JOptionPane.showMessageDialog(ReturnBook.this,"Book returned successfully!");
+					JOptionPane.showMessageDialog(ReturnBook.this,"Item returned successfully!");
 					LibrarianSuccess.main(new String[]{});
 					frame.dispose();
 					
@@ -80,7 +80,7 @@ public class ReturnBook extends JFrame {
 			}
 		});
 		
-		JLabel lblNewLabel = new JLabel("Note: Check the book properly!");
+		JLabel lblNewLabel = new JLabel("Note: Check the item properly!");
 		lblNewLabel.setForeground(Color.RED);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		

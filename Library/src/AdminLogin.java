@@ -49,7 +49,7 @@ public class AdminLogin extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JLabel lblAdminLoginForm = new JLabel("Admin Login Form");
+		JLabel lblAdminLoginForm = new JLabel("Admin Login Form (P4 and P5):");
 		lblAdminLoginForm.setForeground(Color.GRAY);
 		lblAdminLoginForm.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		
@@ -60,16 +60,16 @@ public class AdminLogin extends JFrame {
 		textField = new JTextField();
 		textField.setColumns(10);
 		
-		JButton btnLogin = new JButton("Login");
+		JButton btnLogin = new JButton("LogIn");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			String name=textField.getText();
 			String password=String.valueOf(passwordField.getPassword());
-			if(name.equals("admin")&&password.equals("admin123")){
+			if(name.equals("admin")&&password.equals("p4p5")){
 				AdminSuccess.main(new String[]{});
 				frame.dispose();
 			}else{
-				JOptionPane.showMessageDialog(AdminLogin.this, "Sorry, Username or Password Error","Login Error!", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(AdminLogin.this, "Oops, Username or Password Error","Login Error!", JOptionPane.ERROR_MESSAGE);
 				textField.setText("");
 				passwordField.setText("");
 			}

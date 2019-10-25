@@ -54,7 +54,7 @@ public class LibrarianForm extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JLabel lblAddLibrarian = new JLabel("Add Librarian");
+		JLabel lblAddLibrarian = new JLabel("Add User");
 		lblAddLibrarian.setForeground(Color.DARK_GRAY);
 		lblAddLibrarian.setFont(new Font("Tahoma", Font.PLAIN, 22));
 		
@@ -87,7 +87,7 @@ public class LibrarianForm extends JFrame {
 		
 		passwordField = new JPasswordField();
 		
-		JButton btnNewButton = new JButton("Add Librarian");
+		JButton btnNewButton = new JButton("Add User");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			String name=textField.getText();
@@ -99,7 +99,7 @@ public class LibrarianForm extends JFrame {
 
 			int i=LibrarianDao.save(name, password, email, address, city, contact);
 			if(i>0){
-				JOptionPane.showMessageDialog(LibrarianForm.this,"Librarian added successfully!");
+				JOptionPane.showMessageDialog(LibrarianForm.this,"User added successfully!");
 				AdminSuccess.main(new String[]{});
 				frame.dispose();
 				

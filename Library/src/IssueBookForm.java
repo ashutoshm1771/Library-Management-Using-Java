@@ -51,11 +51,11 @@ public class IssueBookForm extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JLabel lblNewLabel = new JLabel("Issue Book ");
+		JLabel lblNewLabel = new JLabel("Issue Entity ");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblNewLabel.setForeground(Color.GRAY);
 		
-		JLabel lblBookName = new JLabel("Book Callno:");
+		JLabel lblBookName = new JLabel("Entity CodeNo:");
 		
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
@@ -69,13 +69,13 @@ public class IssueBookForm extends JFrame {
 		textField_4 = new JTextField();
 		textField_4.setColumns(10);
 		
-		JLabel lblStudentId = new JLabel("Student Id:");
+		JLabel lblStudentId = new JLabel("User Id:");
 		
-		JLabel lblStudentName = new JLabel("Student Name:");
+		JLabel lblStudentName = new JLabel("User Name:");
 		
-		JLabel lblStudentContact = new JLabel("Student Contact:");
+		JLabel lblStudentContact = new JLabel("User Contact:");
 		
-		JButton btnIssueBook = new JButton("Issue Book");
+		JButton btnIssueBook = new JButton("Issue Item");
 		btnIssueBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -88,7 +88,7 @@ public class IssueBookForm extends JFrame {
 			
 			int i=IssueBookDao.save(bookcallno, studentid, studentname, studentcontact);
 			if(i>0){
-				JOptionPane.showMessageDialog(IssueBookForm.this,"Book issued successfully!");
+				JOptionPane.showMessageDialog(IssueBookForm.this,"Entity issued successfully!");
 				LibrarianSuccess.main(new String[]{});
 				frame.dispose();
 				
@@ -97,7 +97,7 @@ public class IssueBookForm extends JFrame {
 			}//end of save if-else
 			
 			}else{
-				JOptionPane.showMessageDialog(IssueBookForm.this,"Sorry, Callno doesn't exist!");
+				JOptionPane.showMessageDialog(IssueBookForm.this,"Sorry, Codeno doesn't exist!");
 			}//end of checkbook if-else
 			
 			}
@@ -111,7 +111,7 @@ public class IssueBookForm extends JFrame {
 			}
 		});
 		
-		JLabel lblNewLabel_1 = new JLabel("Note: Please check Student ID Carefully before issuing book!");
+		JLabel lblNewLabel_1 = new JLabel("Note: Please check User ID Carefully before issuing item!");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		lblNewLabel_1.setForeground(Color.RED);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);

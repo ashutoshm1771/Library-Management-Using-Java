@@ -48,7 +48,7 @@ public class AdminSuccess extends JFrame {
 		lblAdminSection.setFont(new Font("Tahoma", Font.PLAIN, 22));
 		lblAdminSection.setForeground(Color.GRAY);
 		
-		JButton btnNewButton = new JButton("Add Librarian");
+		JButton btnNewButton = new JButton("Add User");
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -57,7 +57,7 @@ public class AdminSuccess extends JFrame {
 			}
 		});
 		
-		JButton btnViewLibrarian = new JButton("View Librarian");
+		JButton btnViewLibrarian = new JButton("View User");
 		btnViewLibrarian.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			ViewLibrarian.main(new String[]{});
@@ -65,7 +65,7 @@ public class AdminSuccess extends JFrame {
 		});
 		btnViewLibrarian.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		
-		JButton btnDeleteLibrarian = new JButton("Delete Librarian");
+		JButton btnDeleteLibrarian = new JButton("Delete User");
 		btnDeleteLibrarian.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			DeleteLibrarian.main(new String[]{});
@@ -74,7 +74,7 @@ public class AdminSuccess extends JFrame {
 		});
 		btnDeleteLibrarian.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		
-		JButton btnLogout = new JButton("Logout");
+		JButton btnLogout = new JButton("SignOut");
 		btnLogout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Library.main(new String[]{});

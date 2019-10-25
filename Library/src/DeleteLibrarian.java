@@ -45,7 +45,7 @@ public class DeleteLibrarian extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JLabel lblEnterId = new JLabel("Enter Id:");
+		JLabel lblEnterId = new JLabel("Enter UserId:");
 		
 		textField = new JTextField();
 		textField.setColumns(10);

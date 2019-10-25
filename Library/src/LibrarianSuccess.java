@@ -44,10 +44,10 @@ public class LibrarianSuccess extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JLabel lblLibrarianSection = new JLabel("Librarian Section - JavaTpoint");
+		JLabel lblLibrarianSection = new JLabel("GoodReads - Your Personal Library");
 		lblLibrarianSection.setFont(new Font("Tahoma", Font.PLAIN, 22));
 		
-		JButton btnNewButton = new JButton("Add Books");
+		JButton btnNewButton = new JButton("Add Item");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			BooksForm.main(new String[]{});
@@ -56,7 +56,7 @@ public class LibrarianSuccess extends JFrame {
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JButton btnViewBooks = new JButton("View Books");
+		JButton btnViewBooks = new JButton("View Item");
 		btnViewBooks.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				ViewBooks.main(new String[]{});
@@ -64,7 +64,7 @@ public class LibrarianSuccess extends JFrame {
 		});
 		btnViewBooks.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JButton btnIssueBook = new JButton("Issue Book");
+		JButton btnIssueBook = new JButton("Issue Item");
 		btnIssueBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				IssueBookForm.main(new String[]{});
@@ -73,7 +73,7 @@ public class LibrarianSuccess extends JFrame {
 		});
 		btnIssueBook.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JButton btnViewIssuedBooks = new JButton("View Issued Books");
+		JButton btnViewIssuedBooks = new JButton("View Issued Items");
 		btnViewIssuedBooks.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ViewIssuedBooks.main(new String[]{});
@@ -81,7 +81,7 @@ public class LibrarianSuccess extends JFrame {
 		});
 		btnViewIssuedBooks.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JButton btnReturnBook = new JButton("Return Book");
+		JButton btnReturnBook = new JButton("Remove Item");
 		btnReturnBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ReturnBook.main(new String[]{});

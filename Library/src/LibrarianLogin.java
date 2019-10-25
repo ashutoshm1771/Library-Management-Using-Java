@@ -49,7 +49,7 @@ public class LibrarianLogin extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JLabel lblAdminLoginForm = new JLabel("Librarian Login Form");
+		JLabel lblAdminLoginForm = new JLabel("User Login Form");
 		lblAdminLoginForm.setForeground(Color.GRAY);
 		lblAdminLoginForm.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		
